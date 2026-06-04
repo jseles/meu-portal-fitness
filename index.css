@@ -1,39 +1,36 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES DO CORPO DO SITE
-   ========================================================================== */
+
 body {
     margin: 0;
     padding: 0;
     background-color: #111111; /* Fundo escuro para o resto do site */
-  
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 #info-musculacao {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)),url("./imagens/fundo-musculacao.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)), url("./imagens/fundo-musculacao.jpg");
     background-size: cover;
     background-position: center;
-   
 }
+
 #info-crossfit {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("./imagens/cros2.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/cros2.jpg");
     background-size: cover;
     background-position: center;
-   
 }
+
 #info-funcional {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("./imagens/Treinamento-funcional.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/Treinamento-funcional.jpg");
     background-size: cover;
     background-position: center;
-   
 }
+
 #info-cardio {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("./imagens/cardio2.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/cardio2.jpg");
     background-size: cover;
     background-position: center;
-   
 }
 
 /* ==========================================================================
@@ -43,10 +40,8 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
-    
     /* 🎯 A CORREÇÃO: Troque min-height por height fixo */
     height: 100vh; 
-    
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/fundotopo.jpg"); 
     background-position: center top;
     background-repeat: no-repeat;
@@ -136,10 +131,11 @@ ul {
     border-radius: 40px;        /* Deixa cada caixinha de treino arredondada */
     transition: all 0.3s ease;  /* Transição suave para os efeitos */
 }
+
 /* Efeito sutil ao passar o mouse nos botões da barra */
 .lista-fit li a:hover {
     background-color: rgb(31, 255, 15); /* Ganha o seu verde característico */
-    color: rgb(31, 255, 15);                     /* Texto muda para preto para dar contraste */
+    color: #000000;                     /* ALTERADO PARA PRETO: Garante leitura nítida sobre o fundo verde */
     box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4); /* Brilho neon sutil embaixo do botão */
     transform: translateY(-2px);        /* O botão sobe de leve, dando sensação de clique */
 }
@@ -176,6 +172,7 @@ ul {
 /* ==========================================================================
    5. A GAVETA LATERAL (Menu Oculto)
    ========================================================================== */
+   
 #lado {
     width: 280px;
     height: 100vh;
@@ -219,7 +216,7 @@ ul {
 /* Quando ativa o checkbox, o botão gira 90 graus */
 #controle-menu:checked ~ .botao-menu {
     transform: rotate(90deg);
-    background-color: rgba(31, 255, 15); /* Fica vermelho ao abrir (vira um botão de fechar) */
+    background-color: rgba(31, 255, 15); /* Fica verde ao abrir */
     color: #FFFFFF;
 }
 
@@ -236,17 +233,16 @@ ul {
 /* Hovers da barra verde superior */
 /* 🏋️‍♂️ INTERAÇÃO DA MUSCULAÇÃO */
 .item-musculacao a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/academiacss.jpg"); /* 🖼️ Caminho da sua imagem */
-    background-size: cover;                 /* 📐 Faz a imagem cobrir o botão todo */
-    background-position: center;             /* 🎯 Centraliza a imagem no botão */
-    color: #FFF;                             /* ⬜ Muda a letra para branco para dar contraste */
-    text-shadow: 1px 1px 3px #000;           /* 🖤 Sombra na letra para ajudar a ler sobre a foto */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/academiacss.jpg");
+    background-size: cover;                 
+    background-position: center;             
+    color: #FFF;                             
+    text-shadow: 1px 1px 3px #000;           
     transition: 0.3s;
-
 }
 
 .item-funcional a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/fu.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/fu.png");
     background-size: cover;
     background-position: center;
     color: #FFF;
@@ -256,7 +252,7 @@ ul {
 
 /* 🤸‍♂️ INTERAÇÃO DO CROSSFIT */
 .item-crossfit a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/crossfitcss.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/crossfitcss.jpg");
     background-size: cover;
     background-position: center;
     color: #FFF;
@@ -266,54 +262,46 @@ ul {
 
 /* 🏃‍♂️ INTERAÇÃO DO CARDIO */
 .item-cardio a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/cardio.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/cardio.jpg");
     background-size: cover;
     background-position: center;
     color: #FFF;
     text-shadow: 1px 1px 3px #000;
     transition: 0.3s;
 }
-/* ==========================================================================
-   8. PRÓXIMOS CONTEÚDOS (Onde a imagem de cima termina)
-   ========================================================================== */
-/* ==========================================================================
-   🎯 ESTRUTURA PROFISSIONAL EM DUAS COLUNAS
-   ========================================================================== */
 
+/* ==========================================================================
+   8. PRÓXIMOS CONTEÚDOS E DUAS COLUNAS PADRONIZADAS
+   ========================================================================== */
 .bloco-informativo {
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 50px 40px;
     border-radius: 12px;
-    background-color: rgba(244, 244, 244, 0.95); /* Deixa o fundo branco sutilmente transparente */
+    background-color: rgba(244, 244, 244, 0.95); 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    /* 🪄 Mágica do Flexbox: Alinha a coluna de texto e a de vídeo lado a lado */
     display: flex;
-    flex-wrap: wrap; /* Se a tela for de celular, ele joga o vídeo para baixo do texto automaticamente */
-    gap: 40px;       /* Dá um espaço elegante de separação entre o texto e o vídeo */
-    align-items: center; /* Alinha os dois verticalmente pelo meio */
+    flex-wrap: wrap; 
+    gap: 40px;       
+    align-items: center; 
 }
 
-/* 📝 Configuração da Metade da Esquerda (Textos) */
 .coluna-esquerda {
-    flex: 1;          /* Ocupa o espaço ideal da esquerda */
-    min-width: 300px; /* Não deixa o texto esmagado em telas menores */
+    flex: 1;          
+    min-width: 300px; 
 }
 
-/* 🎬 Configuração da Metade da Direita (Vídeo / Imagens atrativas) */
 .coluna-direita {
-    flex: 1;          /* Ocupa a outra metade perfeita na direita */
+    flex: 1;          
     min-width: 300px;
     display: flex;
     justify-content: center;
 }
 
-/* Deixa o vídeo responsivo e imponente na direita */
 .video-container {
     width: 100%;
-    max-width: 500px; /* Limita o tamanho do vídeo para ficar elegante */
+    max-width: 500px; 
 }
 
 .video-container iframe {
@@ -323,9 +311,6 @@ ul {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ==========================================================================
-   ✍️ ESTILOS DE TEXTO E HIERARQUIA
-   ========================================================================== */
 .bloco-informativo h2 {
     font-size: 2.2em;
     color: rgb(31, 255, 15);
@@ -338,7 +323,7 @@ ul {
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 25px;
-    border-left: 5px solid rgb(31, 255, 15); /* Barrinha verde do seu tema */
+    border-left: 5px solid rgb(31, 255, 15); 
     padding-left: 12px;
 }
 
@@ -373,50 +358,25 @@ ul {
 }
 
 .lista-beneficios li::before {
-    content: "✓"; /* Um check dinâmico e focado em resultados */
+    content: "✓"; 
     color: rgb(31, 255, 15);
     font-weight: bold;
     font-size: 1.1em;
     position: absolute;
     left: 5px;
     top: 0;
-
 }
-/* ==========================================================================
-   🚀 SCROLL-DRIVEN ANIMATIONS (Animação controlada pelo Scroll)
-   ========================================================================== */
 
-/* Criamos a lógica do movimento (regras da animação) */
 @keyframes revelarBloco {
     from {
         opacity: 0;
-        transform: translateY(80px) scale(0.95); /* Começa mais baixo, invisível e menor */
+        transform: translateY(80px) scale(0.95); 
     }
     to {
         opacity: 1;
-        transform: translateY(0) scale(1); /* Termina na posição original e 100% visível */
+        transform: translateY(0) scale(1); 
     }
 }
-
-/* Aplicamos a animação baseada no Scroll do navegador */
-.bloco-informativo {
-    /* 1. Nome do @keyframes que criamos acima */
-    animation-name: revelarBloco;
-    
-    /* 2. Configuração crucial para a animação não dar trancos */
-    animation-fill-mode: both;
-    
-    /* 3. 🪄 A MÁGICA: Vincula o tempo da animação à visão do elemento na tela */
-    animation-timeline: view();
-    
-    /* 4. Define em qual momento da tela a animação começa e termina.
-          Aqui diz: Começa quando a borda superior do bloco entra 5% na parte de baixo da tela
-          e termina de animar quando ele cobrir 40% da tela. */
-    animation-range: entry 5% cover 40%;
-}
-/* ==========================================================================
-   7. 🪄 DUAS COLUNAS PADRONIZADAS (Musculação, Crossfit, Funcional e Cardio)
-   ========================================================================== */
 
 #info-musculacao, 
 #info-crossfit,
@@ -428,7 +388,6 @@ ul {
     align-items: center; 
 }
 
-/* Controla as metades da esquerda */
 #info-musculacao .coluna-esquerda,
 #info-crossfit .coluna-esquerda,
 #info-funcional .coluna-esquerda,
@@ -437,8 +396,7 @@ ul {
     min-width: 300px;
 }
 
-/* Controla as metades da direita */
-#info-musculacao .coluna-right, /* Caso use a classe original do seu CSS */
+#info-musculacao .coluna-right, 
 #info-musculacao .coluna-direita,
 #info-crossfit .coluna-direita,
 #info-funcional .coluna-direita,
@@ -449,7 +407,6 @@ ul {
     justify-content: center;
 }
 
-/* Força as colunas principais a dividirem a tela de forma idêntica (50% cada) */
 .coluna-esquerda, 
 .coluna-direita {
     flex: 1;
@@ -461,14 +418,14 @@ ul {
     width: 100%;
 }
 
-/* Centraliza os vídeos dentro de suas respectivas metades */
 .coluna-esquerda .video-container,
 .coluna-direita .video-container {
     margin: 0 auto;
 }
+
 .btn-voltar-topo {
-    display: block;              /* Muda para bloco para respeitar as margens */
-    width: fit-content;          /* 🎯 Força o botão a ter APENAS o tamanho do texto interno */
+    display: block;              
+    width: fit-content;          
     margin-top: 25px;
     padding: 10px 22px;
     font-size: 0.9em;
@@ -489,49 +446,29 @@ ul {
     transform: translateY(-2px);
 }
 
-.btn-voltar-topo:hover {
-    background-color: rgb(31, 255, 15);
-    color: #000000;
-    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4);
-    transform: translateY(-2px);
-}
-/* ==========================================================================
-   ✨ ANIMAÇÃO DE ROLAGEM PARA OS CONTEÚDOS ESCRITOS
-   ========================================================================== */
-
-/* Aplica o efeito de surgimento nos blocos e caixas de texto */
 #info-musculacao .coluna-esquerda,
 #info-crossfit .coluna-direita .conteudo-texto,
 #info-funcional .coluna-esquerda .conteudo-texto,
 #info-cardio .coluna-direita .conteudo-texto {
-    
-    /* Ativa a animação que você criou (ex: fade-in ou subir) */
     animation: surgirDoFundo linear both;
-    
-    /* Vincula a animação diretamente ao scroll do navegador */
     animation-timeline: view();
-    
-    /* Configura para começar a aparecer quando entrar 5% na tela e terminar em 40% */
     animation-range: entry 5% cover 40%; 
 }
 
-/* Garante que o navegador entenda a mudança de opacidade durante o scroll */
 @keyframes surgirDoFundo {
     from {
         opacity: 0;
-        transform: translateY(50px); /* Começa um pouco mais abaixo */
+        transform: translateY(50px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0);    /* Sobe para a posição original */
+        transform: translateY(0);    
     }
 }
-/* ==========================================================================
-   🎯 BLOCO DE CHAMADA PARA FICHA DE TREINO
-   ========================================================================== */
+
 .chamada-treino {
-    background-color: rgba(255, 255, 255, 0.05); /* Fundo escuro levemente transparente */
-    border-left: 4px solid rgb(31, 255, 15);     /* Barra lateral verde neon */
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-left: 4px solid rgb(31, 255, 15);     
     padding: 20px;
     margin: 30px 0;
     border-radius: 0 12px 12px 0;
@@ -543,6 +480,7 @@ ul {
     color: rgb(31, 255, 15);
     margin-bottom: 5px;
 }
+
 .aviso-importante {
     font-size: 1.0em;
     color: yellow;
@@ -556,11 +494,10 @@ ul {
     margin-bottom: 15px;
 }
 
-/* O botão de ação principal */
 .btn-ver-treino {
     display: inline-block;
     background-color: rgb(31, 255, 15);
-    color: #000000;
+    color: #ffffff;
     padding: 12px 24px;
     font-weight: bold;
     text-decoration: none;
@@ -575,24 +512,126 @@ ul {
     transform: scale(1.03);
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
+
 /* ==========================================================================
-   📱 CONFIGURAÇÃO RESPONSIVA PARA CELULAR (A CORREÇÃO DA BARRA VERDE)
+   🎯 9. CENTRAL DE FICHAS DE TREINO (ESTILO PREMIUM GLASSMORPHISM)
+   ========================================================================== */
+.central-treinos {
+    margin: 30px auto 0 auto;
+    max-width: 580px;
+    padding: 22px;
+    
+    /* 🌌 Mágica do Vidro Fosco: Fundo escuro sutilmente transparente + desfoque de fundo */
+    background-color: rgba(0, 0, 0, 0.45); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* ✨ Borda idêntica à barra verde: Arredondada (25px) e com a sua cor rgb neon */
+    border: 1px solid rgb(31, 255, 15); 
+    border-radius: 25px; 
+    
+    text-align: center;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6);
+}
+
+.central-treinos label {
+    display: block;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Deixa o título em caixa alta para dar impacto */
+}
+
+.campo-selecao-grupo {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    
+}
+
+/* Caixa de Escolha (Select) Customizada */
+.central-treinos select {
+    flex: 1;
+    padding: 12px 40px 12px 18px; /* Espaço extra na direita para a nova seta */
+    background-color: rgba(17, 17, 17, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+
+    /* 🪚 Remove a seta padrão feia e quadrada do Windows/Navegadores */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* 🏹 Insere uma nova seta minimalista em formato de linha fina (SVG) */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231fff0f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+/* 🟢 Efeito ao passar o mouse ou focar no Select principal */
+.central-treinos select:hover,
+.central-treinos select:focus {
+    border-color: rgb(31, 255, 15);
+    box-shadow: 0 0 12px rgba(31, 255, 15, 0.4);
+}
+
+/* Opções internas do Select (Dropdown list) */
+.central-treinos option {
+    background-color: #111111; /* Cor sólida para garantir leitura em qualquer sistema */
+    color: #ffffff;
+    padding: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+/* Botão de Abertura do Treino */
+.btn-abrir-treino {
+    background-color: rgb(31, 255, 15);
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 0.95em;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.25);
+}
+
+.btn-abrir-treino:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   📱 10. REGRAS DE RESPONSIVIDADE (MOBILE / CELULARES)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Alvo cirúrgico na sua classe de menu real */
+    /* 📲 Ajuste Cirúrgico na Barra Verde Superior para virar lista vertical no Mobile */
     .lista-fit { 
         display: flex !important;
-        flex-direction: column !important; /* Transforma a barra horizontal em lista vertical */
+        flex-direction: column !important; 
         align-items: center !important;
         width: 90% !important;
         gap: 12px !important;
         height: auto !important;
         padding: 20px 15px !important;
-        border-radius: 20px !important; /* Ajusta o arredondamento para o modo vertical */
+        border-radius: 20px !important; 
         margin: 30px auto !important;
     }
 
-    /* Força os botões individuais (li) e os links (a) a ocuparem a largura total da lista */
     .lista-fit li {
         width: 100% !important;
         flex: none !important;
@@ -604,4 +643,74 @@ ul {
         text-align: center !important;
         box-sizing: border-box !important;
     }
+
+    /* 📲 Ajuste da Central de Fichas para telas de Celular */
+    .campo-selecao-grupo {
+        flex-direction: column; /* Empilha o select e o botão no celular */
+        gap: 12px;
+    }
+    
+    .central-treinos select {
+        width: 100%;
+        background-position: right 18px center; /* Ajusta o respiro da seta */
+    }
+    
+    .btn-abrir-treino {
+        width: 100%;
+    }
+    
+    .central-treinos {
+        width: 90%;
+        border-radius: 20px; /* Bordas ligeiramente menores para casar com a tela menor */
+        padding: 18px;
+    }
+}
+/* 1. Estilização Geral da Caixa Principal (Select) */
+#selecao-treino {
+    width: 100%;
+    max-width: 400px; /* Ajuste o tamanho máximo como preferir */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff; /* Texto branco */
+    background-color: #111111; /* Fundo escuro combinando com seu site */
+    border: 2px solid #1fff0f; /* Borda Verde Neon idêntica ao seu menu */
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    
+    /* Remove a setinha padrão feia do navegador para podermos customizar */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Adiciona uma setinha customizada em formato SVG na cor verde neon */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231fff0f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+/* Efeito de Brilho Neon quando clicar ou passar o mouse */
+#selecao-treino:hover, 
+#selecao-treino:focus {
+    box-shadow: 0 0 15px rgba(31, 255, 15, 0.4);
+    border-color: #1fff0f;
+}
+
+/* 2. Estilização das Opções Internas (Lista Suspensa) */
+#selecao-treino option {
+    background-color: #1a1a1a; /* Cor do fundo da caixinha que abre */
+    color: #ffffff; /* Cor do texto das opções */
+    padding: 12px;
+    font-family: sans-serif; /* Evita que a fonte mude para a padrão do Windows */
+    backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px); /* Garante o funcionamento no Safari/iOS */
+}
+
+/* Estilo para a primeira opção desabilitada (Escolha uma modalidade...) */
+#selecao-treino option:disabled {
+    color: #888888; /* Texto cinza para o placeholder */
+    background-color: #111111;
 }

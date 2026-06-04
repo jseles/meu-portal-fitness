@@ -11,3 +11,15 @@ todosOsLinks.forEach(link => {
         controleMenu.checked = false;
     });
 });
+function irParaTreino() {
+    const select = document.getElementById('selecao-treino');
+    const urlSelecionada = select.value;
+    
+    if (urlSelecionada) {
+        // Redireciona para a página da ficha escolhida
+        window.location.href = urlSelecionada;
+    } else {
+        // Alerta caso a pessoa clique sem escolher nada
+        alert('Por favor, selecione uma modalidade de treino primeiro!');
+    }
+}

@@ -12,25 +12,25 @@ html {
     scroll-behavior: smooth;
 }
 #info-musculacao {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)),url("imagens/fundo-musculacao.jpg");
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)),url("./imagens/fundo-musculacao.jpg");
     background-size: cover;
     background-position: center;
    
 }
 #info-crossfit {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("imagens/cros2.jpg");
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("./imagens/cros2.jpg");
     background-size: cover;
     background-position: center;
    
 }
 #info-funcional {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("imagens/Treinamento-funcional.jpg");
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("./imagens/Treinamento-funcional.jpg");
     background-size: cover;
     background-position: center;
    
 }
 #info-cardio {
-     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("imagens/cardio2.jpg");
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("./imagens/cardio2.jpg");
     background-size: cover;
     background-position: center;
    
@@ -47,7 +47,7 @@ html {
     /* 🎯 A CORREÇÃO: Troque min-height por height fixo */
     height: 100vh; 
     
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("imagens/fundotopo.jpg"); 
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/fundotopo.jpg"); 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +236,7 @@ ul {
 /* Hovers da barra verde superior */
 /* 🏋️‍♂️ INTERAÇÃO DA MUSCULAÇÃO */
 .item-musculacao a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/academiacss.jpg"); /* 🖼️ Caminho da sua imagem */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/academiacss.jpg"); /* 🖼️ Caminho da sua imagem */
     background-size: cover;                 /* 📐 Faz a imagem cobrir o botão todo */
     background-position: center;             /* 🎯 Centraliza a imagem no botão */
     color: #FFF;                             /* ⬜ Muda a letra para branco para dar contraste */
@@ -246,7 +246,7 @@ ul {
 }
 
 .item-funcional a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/fu.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/fu.png");
     background-size: cover;
     background-position: center;
     color: #FFF;
@@ -256,7 +256,7 @@ ul {
 
 /* 🤸‍♂️ INTERAÇÃO DO CROSSFIT */
 .item-crossfit a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/crossfitcss.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/crossfitcss.jpg");
     background-size: cover;
     background-position: center;
     color: #FFF;
@@ -266,7 +266,7 @@ ul {
 
 /* 🏃‍♂️ INTERAÇÃO DO CARDIO */
 .item-cardio a:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/cardio.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("./imagens/cardio.jpg");
     background-size: cover;
     background-position: center;
     color: #FFF;
@@ -575,23 +575,33 @@ ul {
     transform: scale(1.03);
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
+/* ==========================================================================
+   📱 CONFIGURAÇÃO RESPONSIVA PARA CELULAR (A CORREÇÃO DA BARRA VERDE)
+   ========================================================================== */
 @media (max-width: 768px) {
-    /* Seleciona o container que envolve os links/botões da barra */
-    nav, .menu-container, [class*="modalidade"] { 
+    /* Alvo cirúrgico na sua classe de menu real */
+    .lista-fit { 
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; /* Transforma a barra horizontal em lista vertical */
         align-items: center !important;
-        width: 100% !important;
-        gap: 15px !important;
+        width: 90% !important;
+        gap: 12px !important;
         height: auto !important;
-        padding: 20px 0 !important;
+        padding: 20px 15px !important;
+        border-radius: 20px !important; /* Ajusta o arredondamento para o modo vertical */
+        margin: 30px auto !important;
     }
 
-    /* Força cada link/botão a ficar grande e quebrar linha */
-    nav a, .menu-container a, button {
-        width: 85% !important;
+    /* Força os botões individuais (li) e os links (a) a ocuparem a largura total da lista */
+    .lista-fit li {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .lista-fit li a {
+        width: 100% !important;
+        padding: 15px 0 !important;
         text-align: center !important;
-        display: block !important;
         box-sizing: border-box !important;
     }
 }

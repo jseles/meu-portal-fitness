@@ -193,23 +193,43 @@ body {
 /* ==========================================================================
    5. RESPONSIVIDADE (Para Celulares)
    ========================================================================== */
+/* ==========================================================================
+   RESPONSIVIDADE AJUSTADA PARA ECRÃS PEQUENOS (TELEMÓVEIS)
+   ========================================================================== */
 @media (max-width: 600px) {
     .container-treino {
-        padding: 20px;
+        padding: 15px; /* Diminui a margem interna para dar mais espaço */
     }
     
     .titulo-pagina {
-        font-size: 1.8em;
+        font-size: 1.6em; /* Diminui o tamanho do título */
+    }
+
+    /* FORÇA A TABELA A TER SCROLL LATERAL SE NÃO COUBER NO ECRÃ */
+    .tabela-treino {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; /* Impede o texto de quebrar linhas de forma feia */
     }
 
     .tabela-treino th, 
     .tabela-treino td {
-        padding: 12px;
-        font-size: 0.85em;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    /* FAZ OS BOTÕES DE SÁB/DOM QUEBRAREM EM DUAS COLUNAS DIRETAS */
+    .dias-wrapper {
+        display: block; /* Remove o alinhamento horizontal rígido */
     }
 
     .dia-btn {
-        min-width: 45%; /* Em telas pequenas, exibe de 2 em 2 por linha */
+        display: inline-block;
+        width: 47%; /* Coloca dois botões por linha perfeitamente */
+        margin: 1.5%;
+        min-width: unset; /* Remove a restrição antiga */
+        padding: 12px 5px;
     }
 }
 

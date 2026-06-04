@@ -1,0 +1,577 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES DO CORPO DO SITE
+   ========================================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111; /* Fundo escuro para o resto do site */
+  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#info-musculacao {
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)),url("imagens/fundo-musculacao.jpg");
+    background-size: cover;
+    background-position: center;
+   
+}
+#info-crossfit {
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("imagens/cros2.jpg");
+    background-size: cover;
+    background-position: center;
+   
+}
+#info-funcional {
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("imagens/Treinamento-funcional.jpg");
+    background-size: cover;
+    background-position: center;
+   
+}
+#info-cardio {
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),url("imagens/cardio2.jpg");
+    background-size: cover;
+    background-position: center;
+   
+}
+
+/* ==========================================================================
+   2. O CONTAINER DA IMAGEM DE FUNDO (Rola junto com o site)
+   ========================================================================== */
+#geral {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    /* 🎯 A CORREÇÃO: Troque min-height por height fixo */
+    height: 100vh; 
+    
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("imagens/fundotopo.jpg"); 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll; 
+}
+
+#topo {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.boas-vindas {
+    margin-top: 15vh; /* Empurra os textos e a barra verde para o centro do vão preto */
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.boas-vindas h2 {
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+.boas-vindas p {
+    font-size: 1.3em;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.titulo {
+    color: rgb(31, 255, 15); 
+    text-shadow: 3px 3px 6px #000;
+    margin: 20px 0 0 0; /* Ajustado o espaçamento superior */
+    font-size: 2.8em;
+    font-weight: bold;
+    animation: wave 1.5s infinite; /* Animação de leve movimento para dar vida ao título */
+}
+
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* ==========================================================================
+   3. MENU SUPERIOR HORIZONTAL (Lista Fit)
+   ========================================================================== */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-fit {
+    display: flex;             /* 🪄 Mudamos para Flexbox para dar super controle */
+    justify-content: center;    /* Centraliza os botões no meio da tela */
+    gap: 15px;                  /* 🎯 O espaço exato que você queria entre cada modalidade */
+    max-width: 950px; 
+    margin: 40px auto 0 auto; 
+    padding: 10px;
+    border-radius: 50px;        /* Deixa a barra principal totalmente arredondada */
+    
+    /* 🌌 Efeito Sutil: Fundo escuro transparente com uma borda verde bem fininha */
+    background-color: rgba(0, 0, 0, 0.6); 
+    border: 1px solid rgba(31, 255, 15); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); /* Dá um leve efeito de vidro fosco no fundo */
+}
+
+.lista-fit li {
+    flex: 1; /* Faz todos os botões terem exatamente o mesmo tamanho proporcional */
+}
+
+.lista-fit li a {
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    color: #ffffff;             /* Texto branco por padrão para ficar sutil e chique */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.05em;
+    border-radius: 40px;        /* Deixa cada caixinha de treino arredondada */
+    transition: all 0.3s ease;  /* Transição suave para os efeitos */
+}
+/* Efeito sutil ao passar o mouse nos botões da barra */
+.lista-fit li a:hover {
+    background-color: rgb(31, 255, 15); /* Ganha o seu verde característico */
+    color: rgb(31, 255, 15);                     /* Texto muda para preto para dar contraste */
+    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4); /* Brilho neon sutil embaixo do botão */
+    transform: translateY(-2px);        /* O botão sobe de leve, dando sensação de clique */
+}
+
+/* ==========================================================================
+   4. O BOTÃO DOS 3 TRACINHOS (Sempre visível no topo esquerdo)
+   ========================================================================== */
+#controle-menu {
+    display: none; /* Esconde o quadradinho do checkbox */
+}
+
+.botao-menu {
+    display: block;
+    font-size: 30px;
+    color: rgb(31, 255, 15); /* Cor verde idêntica ao seu tema */
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo preto circular atrás dele */
+    width: 55px;
+    height: 55px;
+    line-height: 50px; /* Centraliza o ícone ☰ perfeitamente */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%; /* Deixa o botão redondo e moderno */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    
+    /* 📌 Fixado na tela para o usuário abrir quando quiser */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100; /* Fica na frente de tudo */
+    
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* ==========================================================================
+   5. A GAVETA LATERAL (Menu Oculto)
+   ========================================================================== */
+#lado {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding-top: 90px; /* Começa abaixo do botão redondo */
+    box-sizing: border-box;
+    
+    /* 👻 Começa totalmente escondido na esquerda */
+    transform: translateX(-100%);
+    background: rgba(15, 15, 15, 0.95); /* Fundo escuro sólido ao abrir */
+    border-right: 4px solid rgb(31, 255, 15);
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+#lado li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#lado li a {
+    display: block;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+/* ==========================================================================
+   6. ANIMAÇÕES DE CLIQUE (Abertura do Menu)
+   ========================================================================== */
+
+/* Quando ativa o checkbox, a gaveta entra deslizando */
+#controle-menu:checked ~ #lado {
+    transform: translateX(0);
+}
+
+/* Quando ativa o checkbox, o botão gira 90 graus */
+#controle-menu:checked ~ .botao-menu {
+    transform: rotate(90deg);
+    background-color: rgba(31, 255, 15); /* Fica vermelho ao abrir (vira um botão de fechar) */
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   7. HOVERS (Efeitos Visuais de Passar o Mouse)
+   ========================================================================== */
+#lado li a:hover {
+    background-color: rgb(31, 255, 15);
+    color: #000000;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* Hovers da barra verde superior */
+/* 🏋️‍♂️ INTERAÇÃO DA MUSCULAÇÃO */
+.item-musculacao a:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/academiacss.jpg"); /* 🖼️ Caminho da sua imagem */
+    background-size: cover;                 /* 📐 Faz a imagem cobrir o botão todo */
+    background-position: center;             /* 🎯 Centraliza a imagem no botão */
+    color: #FFF;                             /* ⬜ Muda a letra para branco para dar contraste */
+    text-shadow: 1px 1px 3px #000;           /* 🖤 Sombra na letra para ajudar a ler sobre a foto */
+    transition: 0.3s;
+
+}
+
+.item-funcional a:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/fu.png");
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    text-shadow: 1px 1px 3px #000;
+    transition: 0.3s;
+}
+
+/* 🤸‍♂️ INTERAÇÃO DO CROSSFIT */
+.item-crossfit a:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/crossfitcss.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    text-shadow: 1px 1px 3px #000;
+    transition: 0.3s;
+}
+
+/* 🏃‍♂️ INTERAÇÃO DO CARDIO */
+.item-cardio a:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url("imagens/cardio.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    text-shadow: 1px 1px 3px #000;
+    transition: 0.3s;
+}
+/* ==========================================================================
+   8. PRÓXIMOS CONTEÚDOS (Onde a imagem de cima termina)
+   ========================================================================== */
+/* ==========================================================================
+   🎯 ESTRUTURA PROFISSIONAL EM DUAS COLUNAS
+   ========================================================================== */
+
+.bloco-informativo {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 40px;
+    border-radius: 12px;
+    background-color: rgba(244, 244, 244, 0.95); /* Deixa o fundo branco sutilmente transparente */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* 🪄 Mágica do Flexbox: Alinha a coluna de texto e a de vídeo lado a lado */
+    display: flex;
+    flex-wrap: wrap; /* Se a tela for de celular, ele joga o vídeo para baixo do texto automaticamente */
+    gap: 40px;       /* Dá um espaço elegante de separação entre o texto e o vídeo */
+    align-items: center; /* Alinha os dois verticalmente pelo meio */
+}
+
+/* 📝 Configuração da Metade da Esquerda (Textos) */
+.coluna-esquerda {
+    flex: 1;          /* Ocupa o espaço ideal da esquerda */
+    min-width: 300px; /* Não deixa o texto esmagado em telas menores */
+}
+
+/* 🎬 Configuração da Metade da Direita (Vídeo / Imagens atrativas) */
+.coluna-direita {
+    flex: 1;          /* Ocupa a outra metade perfeita na direita */
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Deixa o vídeo responsivo e imponente na direita */
+.video-container {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho do vídeo para ficar elegante */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   ✍️ ESTILOS DE TEXTO E HIERARQUIA
+   ========================================================================== */
+.bloco-informativo h2 {
+    font-size: 2.2em;
+    color: rgb(31, 255, 15);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitulo-bloco {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 25px;
+    border-left: 5px solid rgb(31, 255, 15); /* Barrinha verde do seu tema */
+    padding-left: 12px;
+}
+
+.texto-detalhado {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.bloco-informativo h3 {
+    font-size: 1.8em;
+    color: rgb(31, 255, 15);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.lista-beneficios li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.lista-beneficios li::before {
+    content: "✓"; /* Um check dinâmico e focado em resultados */
+    color: rgb(31, 255, 15);
+    font-weight: bold;
+    font-size: 1.1em;
+    position: absolute;
+    left: 5px;
+    top: 0;
+
+}
+/* ==========================================================================
+   🚀 SCROLL-DRIVEN ANIMATIONS (Animação controlada pelo Scroll)
+   ========================================================================== */
+
+/* Criamos a lógica do movimento (regras da animação) */
+@keyframes revelarBloco {
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95); /* Começa mais baixo, invisível e menor */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Termina na posição original e 100% visível */
+    }
+}
+
+/* Aplicamos a animação baseada no Scroll do navegador */
+.bloco-informativo {
+    /* 1. Nome do @keyframes que criamos acima */
+    animation-name: revelarBloco;
+    
+    /* 2. Configuração crucial para a animação não dar trancos */
+    animation-fill-mode: both;
+    
+    /* 3. 🪄 A MÁGICA: Vincula o tempo da animação à visão do elemento na tela */
+    animation-timeline: view();
+    
+    /* 4. Define em qual momento da tela a animação começa e termina.
+          Aqui diz: Começa quando a borda superior do bloco entra 5% na parte de baixo da tela
+          e termina de animar quando ele cobrir 40% da tela. */
+    animation-range: entry 5% cover 40%;
+}
+/* ==========================================================================
+   7. 🪄 DUAS COLUNAS PADRONIZADAS (Musculação, Crossfit, Funcional e Cardio)
+   ========================================================================== */
+
+#info-musculacao, 
+#info-crossfit,
+#info-funcional,
+#info-cardio { 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;       
+    align-items: center; 
+}
+
+/* Controla as metades da esquerda */
+#info-musculacao .coluna-esquerda,
+#info-crossfit .coluna-esquerda,
+#info-funcional .coluna-esquerda,
+#info-cardio .coluna-esquerda {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Controla as metades da direita */
+#info-musculacao .coluna-right, /* Caso use a classe original do seu CSS */
+#info-musculacao .coluna-direita,
+#info-crossfit .coluna-direita,
+#info-funcional .coluna-direita,
+#info-cardio .coluna-direita {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Força as colunas principais a dividirem a tela de forma idêntica (50% cada) */
+.coluna-esquerda, 
+.coluna-direita {
+    flex: 1;
+    min-width: 320px; 
+    box-sizing: border-box;
+}
+
+.conteudo-texto {
+    width: 100%;
+}
+
+/* Centraliza os vídeos dentro de suas respectivas metades */
+.coluna-esquerda .video-container,
+.coluna-direita .video-container {
+    margin: 0 auto;
+}
+.btn-voltar-topo {
+    display: block;              /* Muda para bloco para respeitar as margens */
+    width: fit-content;          /* 🎯 Força o botão a ter APENAS o tamanho do texto interno */
+    margin-top: 25px;
+    padding: 10px 22px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(31, 255, 15);
+    text-decoration: none;
+    border: 2px solid rgb(31, 255, 15);
+    border-radius: 30px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-voltar-topo:hover {
+    background-color: rgb(31, 255, 15);
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-voltar-topo:hover {
+    background-color: rgb(31, 255, 15);
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4);
+    transform: translateY(-2px);
+}
+/* ==========================================================================
+   ✨ ANIMAÇÃO DE ROLAGEM PARA OS CONTEÚDOS ESCRITOS
+   ========================================================================== */
+
+/* Aplica o efeito de surgimento nos blocos e caixas de texto */
+#info-musculacao .coluna-esquerda,
+#info-crossfit .coluna-direita .conteudo-texto,
+#info-funcional .coluna-esquerda .conteudo-texto,
+#info-cardio .coluna-direita .conteudo-texto {
+    
+    /* Ativa a animação que você criou (ex: fade-in ou subir) */
+    animation: surgirDoFundo linear both;
+    
+    /* Vincula a animação diretamente ao scroll do navegador */
+    animation-timeline: view();
+    
+    /* Configura para começar a aparecer quando entrar 5% na tela e terminar em 40% */
+    animation-range: entry 5% cover 40%; 
+}
+
+/* Garante que o navegador entenda a mudança de opacidade durante o scroll */
+@keyframes surgirDoFundo {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Começa um pouco mais abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Sobe para a posição original */
+    }
+}
+/* ==========================================================================
+   🎯 BLOCO DE CHAMADA PARA FICHA DE TREINO
+   ========================================================================== */
+.chamada-treino {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo escuro levemente transparente */
+    border-left: 4px solid rgb(31, 255, 15);     /* Barra lateral verde neon */
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 12px 12px 0;
+}
+
+.pergunta-identificacao {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(31, 255, 15);
+    margin-bottom: 5px;
+}
+.aviso-importante {
+    font-size: 1.0em;
+    color: yellow;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.texto-chamada {
+    color: #ffffff;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+/* O botão de ação principal */
+.btn-ver-treino {
+    display: inline-block;
+    background-color: rgb(31, 255, 15);
+    color: #000000;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.2);
+}
+
+.btn-ver-treino:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}

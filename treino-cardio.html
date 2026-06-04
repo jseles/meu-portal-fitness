@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cardio.css">
+    <title>Sua Ficha de Cardio - Portal Fitness</title>
+</head>
+<body>
+
+    <div class="container-treino">
+        
+        <!-- Link de Retorno -->
+        <a href="index.html" class="voltar-home">← Voltar ao Portal</a>
+        
+        <!-- Cabeçalho da Ficha -->
+        <h1 class="titulo-pagina">Ficha de Cardio Básico 🏃‍♂️</h1>
+        <p class="subtitulo-pagina">Ideal para queimar gordura, melhorar o fôlego e construir consistência.</p>
+
+        <!-- Tabela com a Rotina de Exercícios -->
+        <table class="tabela-treino">
+            <thead>
+                <tr>
+                    <th>Exercício</th>
+                    <th>Tempo / Intensidade</th>
+                    <th>Tipo de Estímulo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong class="nome-exercicio">Esteira (Aquecimento)</strong></td>
+                    <td>5 Minutos (Caminhada leve)</td>
+                    <td>Contínuo</td>
+                </tr>
+                <tr>
+                    <td><strong class="nome-exercicio">Esteira (HIIT)</strong></td>
+                    <td>20 Minutos (Alternar 1min rápido / 1min andando)</td>
+                    <td>Intervalado</td>
+                </tr>
+                <tr>
+                    <td><strong class="nome-exercicio">Bicicleta Ergométrica</strong></td>
+                    <td>15 Minutos (Ritmo moderado)</td>
+                    <td>Resistência</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Painel de Check-in Semanal -->
+        <div class="painel-checkin">
+          <!-- 🎯 ATUALIZADO: Adicionamos o span que vai mostrar a semana atual -->
+            <h3 class="titulo-checkin">
+                Seu Painel de Consistência: <span id="contador-semanas" style="color: rgb(31, 255, 15);">1ª Semana</span>
+            </h3>
+            <p class="instrucao-checkin">Clique no dia para marcar o treino como finalizado:</p>
+            <!-- Bloco dos botões de dias -->
+            <div class="dias-wrapper">
+                <div class="dia-btn" data-dia="seg">Segunda ✓</div>
+                <div class="dia-btn" data-dia="ter">Terça ✓</div>
+                <div class="dia-btn" data-dia="qua">Quarta ✓</div>
+                <div class="dia-btn" data-dia="qui">Quinta ✓</div>
+                <div class="dia-btn" data-dia="sex">Sexta ✓</div>
+            </div>
+
+            <!-- Botão de Reset -->
+            <button class="btn-reset" id="reset-progresso">Reiniciar Semana / Avançar →</button>
+        </div>
+
+    </div>
+<div id="modal-conquista" class="modal-fundo">
+        <div class="modal-conteudo">
+            <div class="trofeu-animado">🏆</div>
+            <h2>Parabéns pelo Progresso!</h2>
+            <p id="texto-parabens">Você concluiu a semana de treinos com sucesso!</p>
+            <button id="btn-fechar-modal">Continuar Treinando 💪</button>
+        </div>
+    </div>
+    <!-- Chamada do script isolado para controle do check-in -->
+    <script src="cardio.js"></script>
+</body>
+</html>

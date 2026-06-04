@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossfit - Meu Portal Fitness</title>
+    <link rel="stylesheet" href="crossfit.css">
+</head>
+<body>
+
+    <div class="container-treino">
+        <a href="index.html" class="voltar-home">← Voltar para o Início</a>
+
+        <h1 class="titulo-pagina">Ficha de Crossfit Básico</h1>
+        <p class="subtitulo-pagina">Alta intensidade, movimentos funcionais e potência. Supere o cronômetro, mantenha a técnica e vença o cansaço!</p>
+
+        <table class="tabela-treino">
+            <thead>
+                <tr>
+                    <th>Etapa do Treino</th>
+                    <th>Exercícios e Estrutura</th>
+                    <th>Tempo / Meta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="nome-exercicio">1. Warm-up (Aquecimento)</span></td>
+                    <td>3 Voltas: 10 Air Squats + 10 Sit-ups + 20 Polichinelos</td>
+                    <td>6 Minutos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">2. Skill (Técnica)</span></td>
+                    <td>Progressão de Carga: Clean & Jerk (Alinhamento de Postura)</td>
+                    <td>8 Minutos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">3. AMRAP (As Many Rounds As Possible)</span></td>
+                    <td>15 Kettlebell Swings + 10 Box Jumps + 5 Push-ups</td>
+                    <td>12 Minutos (Foco)</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">4. Cash-Out (Desafio Final)</span></td>
+                    <td>Máximo de tempo em Prancha Abdominal Estática</td>
+                    <td>Até a falha</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="painel-checkin">
+            <h3 id="contador-semanas" class="titulo-checkin">1ª Semana de Crossfit</h3>
+            <p class="instrucao-checkin">Clique nos dias em que você pagou o WOD e superou os limites do cronômetro.</p>
+            
+            <div class="dias-wrapper">
+                <button class="dia-btn" data-dia="seg">SEG ✓</button>
+                <button class="dia-btn" data-dia="ter">TER ✓</button>
+                <button class="dia-btn" data-dia="qua">QUA ✓</button>
+                <button class="dia-btn" data-dia="qui">QUI ✓</button>
+                <button class="dia-btn" data-dia="sex">SEX ✓</button>
+            </div>
+
+            <button id="reset-progresso" class="btn-reset">Reiniciar Semana / Avançar →</button>
+        </div>
+    </div>
+
+    <div id="modal-conquista" class="modal-fundo">
+        <div class="modal-conteudo">
+            <span class="trofeu-animado">🏆</span>
+            <h2>Semana Concluída!</h2>
+            <p id="texto-parabens">Sensacional! A sua semana de treino foi totalmente concluída.</p>
+            <button id="btn-fechar-modal">Continuar Treinando</button>
+        </div>
+    </div>
+
+    <script src="crossfit.js"></script>
+</body>
+</html>

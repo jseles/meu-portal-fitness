@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musculação Clássica - Meu Portal Fitness</title>
+    <link rel="stylesheet" href="musculacao.css">
+</head>
+<body>
+
+    <div class="container-treino">
+        <a href="index.html" class="voltar-home">← Voltar para o Início</a>
+
+        <h1 class="titulo-pagina">Ficha de Musculação Clássica</h1>
+        <p class="subtitulo-pagina">Treino focado em hipertrofia, força progressiva e definição muscular. Mantenha a cadência e controle a carga!</p>
+
+        <table class="tabela-treino">
+            <thead>
+                <tr>
+                    <th>Exercício</th>
+                    <th>Séries x Repetições</th>
+                    <th>Descanso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="nome-exercicio">1. Agachamento Livre</span></td>
+                    <td>4 x 10 a 12 repetições</td>
+                    <td>90 segundos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">2. Supino Reto (Barra ou Halteres)</span></td>
+                    <td>4 x 8 a 10 repetições</td>
+                    <td>90 segundos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">3. Puxada Alta na Polia (Costas)</span></td>
+                    <td>4 x 10 repetições</td>
+                    <td>60 segundos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">4. Desenvolvimento de Ombros (Halteres)</span></td>
+                    <td>3 x 10 a 12 repetições</td>
+                    <td>60 segundos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">5. Rosca Direta + Tríceps Pulley (Super-Série)</span></td>
+                    <td>3 x 12 repetições cada</td>
+                    <td>60 segundos</td>
+                </tr>
+                <tr>
+                    <td><span class="nome-exercicio">6. Cadeira Extensora + Flexora</span></td>
+                    <td>3 x 12 a 15 repetições</td>
+                    <td>60 segundos</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="painel-checkin">
+            <h3 id="contador-semanas" class="titulo-checkin">1ª Semana de Musculação</h3>
+            <p class="instrucao-checkin">Clique nos dias em que você pagou o treino de força para registrar sua consistência.</p>
+            
+            <div class="dias-wrapper">
+                <button class="dia-btn" data-dia="seg">SEG ✓</button>
+                <button class="dia-btn" data-dia="ter">TER ✓</button>
+                <button class="dia-btn" data-dia="qua">QUA ✓</button>
+                <button class="dia-btn" data-dia="qui">QUI ✓</button>
+                <button class="dia-btn" data-dia="sex">SEX ✓</button>
+            </div>
+
+            <button id="reset-progresso" class="btn-reset">Reiniciar Semana / Avançar →</button>
+        </div>
+    </div>
+
+    <div id="modal-conquista" class="modal-fundo">
+        <div class="modal-conteudo">
+            <span class="trofeu-animado">🏆</span>
+            <h2>Semana Concluída!</h2>
+            <p id="texto-parabens">Sensacional! A sua semana de treino foi totalmente concluída.</p>
+            <button id="btn-fechar-modal">Continuar Treinando</button>
+        </div>
+    </div>
+
+    <script src="musculacao.js"></script>
+</body>
+</html>

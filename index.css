@@ -575,3 +575,32 @@ ul {
     transform: scale(1.03);
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
+/* ==========================================================================
+   CONFIGURAÇÃO RESPONSIVA: ATIVADA APENAS NO CELULAR (TELAS ATÉ 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Transforma a barra verde de modalidades em uma lista vertical */
+    .caixa-modalidades, 
+    .menu-modalidades, 
+    .nav-modalidades { 
+        display: flex;
+        flex-direction: column; /* Força os botões a ficarem um embaixo do outro */
+        align-items: center;
+        width: 100%;
+        gap: 12px;             /* Cria um espaçamento confortável entre cada botão */
+        padding: 10px 0;
+    }
+
+    /* 2. Faz cada botão ocupar quase a largura total da tela no celular */
+    .caixa-modalidades a, 
+    .menu-modalidades button,
+    .nav-modalidades a,
+    .modalidade-btn { 
+        width: 90%;            /* Deixa o botão largo e fácil de clicar com o polegar */
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 1.1em;
+        display: block;
+    }
+}

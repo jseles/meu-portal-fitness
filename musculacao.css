@@ -458,25 +458,55 @@ body {
     padding: 10px 24px 24px 24px; /* Devolve o espaçamento interno */
     border-top: 1px solid #222222;
 }
+.container-botoes-nivel {
+    display: flex;
+    flex-direction: column; /* Isso empilha os botões verticalmente */
+    gap: 10px;              /* Espaçamento entre os botões */
+    width: 100%;            /* Ocupa a largura total para alinhar como a barra verde */
+}
+
+.botao-nivel {
+    width: 100%;            /* Garante que todos tenham a mesma largura */
+    padding: 15px;          /* Ajuste o tamanho conforme sua preferência */
+    text-align: center;
+    border: 2px solid transparent; /* Bordas iniciais */
+}
+
+/* Opcional: Para manter o destaque verde conforme a imagem */
+.botao-nivel.ativo {
+    border-color: #00ff00;  /* Cor da borda verde que você deseja */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
 .nav-niveis {
     display: flex;
-    flex-direction: column; /* Empilha os botões verticalmente */
-    gap: 10px;              /* Espaçamento entre os botões */
-    width: 100%;            /* Faz a barra ocupar toda a largura disponível */
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
 }
 
 .btn-nivel {
-    width: 100%;            /* Garante que o botão preencha toda a largura */
-    padding: 15px;          /* Ajusta a altura do botão */
-    background: #1a1a1a;    /* Cor de fundo escura, baseada no seu print */
+    /* Efeito Glassmorphism */
+    background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+    backdrop-filter: blur(15px);           /* O efeito de desfoque */
+    border: 0.5px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    border-radius: 60px;                   /* Arredondamento */
+    
+    /* Estilização */
+    padding: 15px 20px;
     color: white;
-    border: 1px solid #333; /* Borda sutil */
-    border-radius: 8px;     /* Bordas arredondadas */
+    font-size: 16px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
-/* Estilo para quando o botão estiver ativo (verde) */
+/* Quando estiver ativo, coloca a borda verde brilhante */
 .btn-nivel.active {
-    border: 2px solid #00ff00; /* Borda verde conforme o seu print */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Efeito de brilho */
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+/* Efeito ao passar o mouse */
+.btn-nivel:hover {
+    background: rgba(255, 255, 255, 0.1);
 }

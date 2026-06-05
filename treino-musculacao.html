@@ -20,92 +20,694 @@
             <button class="btn-nivel" data-nivel="avancado">Avançado</button>
         </nav>
 
-        <div id="treino-basico" class="conteudo-treino">
-            <table class="tabela-treino">
-                <thead>
-                    <tr>
-                        <th>Exercício</th>
-                        <th>Séries x Repetições</th>
-                        <th>Descanso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="nome-exercicio">1. Agachamento Livre</span></td>
-                        <td>4 x 10 a 12 repetições</td>
-                        <td>90 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-exercicio">2. Supino Reto (Barra ou Halteres)</span></td>
-                        <td>4 x 8 a 10 repetições</td>
-                        <td>90 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-exercicio">3. Puxada Alta na Polia (Costas)</span></td>
-                        <td>4 x 10 repetições</td>
-                        <td>60 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-exercicio">4. Desenvolvimento de Ombros (Halteres)</span></td>
-                        <td>3 x 10 a 12 repetições</td>
-                        <td>60 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-exercicio">5. Rosca Direta + Tríceps Pulley (Super-Série)</span></td>
-                        <td>3 x 12 repetições cada</td>
-                        <td>60 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-exercicio">6. Cadeira Extensora + Flexora</span></td>
-                        <td>3 x 12 a 15 repetições</td>
-                        <td>60 segundos</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- TREINO BÁSICO -->
+  <div id="treino-basico" class="conteudo-treino" style="display: none;">
+    <div class="lista-sanfona-treino">
+        
+        <!-- Treino A -->
+        <div class="bloco-treino-item" data-treino="t1">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 1</h3>
+                    <p>COSTAS, BÍCEPS E PANTURRILHA</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Puxador Alto</td><td>3 x 8-10</td><td>120 segundos</td></tr>
+                        <tr><td>Remada Baixa Barra</td><td>3 x 8-10</td><td>120 segundos</td></tr>
+                        <tr><td>Barra Fixa ou Graviton</td><td>3 x Falha</td><td>120 segundos</td></tr>
+                        <tr><td>Rosca Direta (Cabo/Barra/Halter)</td><td>3 x 12</td><td>60 segundos</td></tr>
+                        <tr><td>Panturrilhas</td><td>3 x 12</td><td>60 segundos</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <div id="treino-intermediario" class="conteudo-treino" style="display: none;">
-            <table class="tabela-treino">
-                <thead>
-                    <tr>
-                        <th>Exercício (Intermediário)</th>
-                        <th>Séries x Repetições</th>
-                        <th>Descanso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="nome-exercicio">1. Leg Press 45º</span></td>
-                        <td>4 x 10 repetições</td>
-                        <td>90 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><span class="nome-exercicio">2. Supino Inclinado com Halteres</span></td>
-                        <td>4 x 10 repetições</td>
-                        <td>60 segundos</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Treino B -->
+        <div class="bloco-treino-item" data-treino="t2">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 2</h3>
+                    <p>MEMBROS INFERIORES E ABDÔMEN</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Agachamento (Variações)</td><td>3 x 8-10</td><td>120 segundos</td></tr>
+                        <tr><td>Leg Press</td><td>3 x 8-10</td><td>120 segundos</td></tr>
+                        <tr><td>Mesa Flexora</td><td>3 x 10-12</td><td>60 segundos</td></tr>
+                        <tr><td>Cadeira Extensora</td><td>3 x 10-12</td><td>60 segundos</td></tr>
+                        <tr><td>Abdominal Roda</td><td>3 x 15</td><td>60 segundos</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <div id="treino-avancado" class="conteudo-treino" style="display: none;">
-            <table class="tabela-treino">
-                <thead>
-                    <tr>
-                        <th>Exercício (Avançado)</th>
-                        <th>Séries x Repetições</th>
-                        <th>Descanso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="nome-exercicio">1. Agachamento Livre (Rest-Pause)</span></td>
-                        <td>4 x 8 repetições</td>
-                        <td>120 segundos</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Treino C -->
+        <div class="bloco-treino-item" data-treino="t3">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 3</h3>
+                    <p>PEITO, OMBROS E TRÍCEPS</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Supino Reto</td><td>3 x 8-10</td><td>120 segundos</td></tr>
+                        <tr><td>Desenvolvimento Militar</td><td>3 x 10-12</td><td>120 segundos</td></tr>
+                        <tr><td>Supino Inclinado (Halter ou Barra)</td><td>3 x 8-10</td><td>120 segundos</td></tr>
+                        <tr><td>Elevação Lateral</td><td>3 x 12</td><td>60 segundos</td></tr>
+                        <tr><td>Tríceps Barra Cabo</td><td>3 x 12</td><td>60 segundos</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+    </div>
+</div>
+
+        <!-- TREINO INTERMEDIÁRIO (Sua Nova Ficha Inserida Aqui) -->
+ <div id="treino-intermediario" class="conteudo-treino" style="display: none;">
+    
+    <div class="lista-sanfona-treino">
+        
+        <div class="bloco-treino-item" data-treino="t1">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 1</h3>
+                    <p>PEITO E TRÍCEPS</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">1. Supino Reto com Barra Reta</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Aumentar a carga entre as séries.<br>
+                                    • 1ª Sem: 15-12-12-10 | 2ª Sem: 12-10-10-8<br>
+                                    • 3ª Sem: 12-10-8-6 | 4ª Sem: 10-8-6-4
+                                </div>
+                            </td>
+                            <td>4 x Pirâmide</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">2. Crucifixo na Polia Média</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Rest-Pause:</strong> Carga fixa. Faz 10, descansa 10seg e faz mais 10. Sem alterações semanais.
+                                </div>
+                            </td>
+                            <td>4 x (10 + 10s + 10)</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">3. Supino Máquina Inclinado (Pegada Pronada)</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Drop-set na última série.<br>
+                                    • 1ª e 2ª Sem: 12 repetições | 3ª Sem: 10 repetições<br>
+                                    • 4ª Sem: Falhar próximo de 8 repetições
+                                </div>
+                            </td>
+                            <td>3 x Variação <span class="tag-tecnica">+ DROP</span></td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">4. Crucifixo Inclinado na Polia</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Rest-pause de 10 segundos.<br>
+                                    • 1ª e 2ª Sem: Faz 12 + 10s + 12 | 3ª Sem: Faz 10 + 10s + 10<br>
+                                    • 4ª Sem: Faz 10 + 10s + Até a Falha
+                                </div>
+                            </td>
+                            <td>4 x Variação</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">5. Tríceps na Polia Barra W</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Intensidade máxima.<br>
+                                    • 1ª Sem: 12 MAX | 2ª Sem: 10 MAX<br>
+                                    • 3ª Sem: 8 MAX | 4ª Sem: 8-6 MAX
+                                </div>
+                            </td>
+                            <td>3 x MAX</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">6. Tríceps Francês na Polia com Corda</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Foco em progressão.<br>
+                                    • 1ª Sem: 12 a 15 | 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bloco-treino-item" data-treino="t2">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 2</h3>
+                    <p>COSTAS E BÍCEPS</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">1. Puxada Neutra Triângulo</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Subir cargas (25kg - 35kg - 40kg - 40kg).<br>
+                                    • 1ª Sem: 15-12-12-10 | 2ª Sem: 12-10-10-8<br>
+                                    • 3ª Sem: 12-10-8-6 | 4ª Sem: 10-8-6-4
+                                </div>
+                            </td>
+                            <td>4 x Pirâmide</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">2. Pulldown com Corda</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Rest-Pause:</strong> Carga 10kg. Faz 10, descansa 10s e faz mais 10.
+                                </div>
+                            </td>
+                            <td>4 x (10 + 10s + 10)</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">3. Remada Curvada com Barra Reta</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga 10kg. Drop-set na última série.<br>
+                                    • 1ª e 2ª Sem: 12 repetições | 3ª Sem: 10 repetições | 4ª Sem: Falhar perto de 8
+                                </div>
+                            </td>
+                            <td>3 x 12 <span class="tag-tecnica">+ DROP</span></td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">4. Remada Baixa (Pegada Pronada)</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga 20kg.<br>
+                                    • 1ª e 2ª Sem: Faz 12 + 10s + 12 | 3ª Sem: Faz 10 + 10s + 10 | 4ª Sem: Faz 10 + 10s + Falha
+                                </div>
+                            </td>
+                            <td>4 x Variação</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">5. Rosca Direta Barra W</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga (15kg - 20kg - 20kg).<br>
+                                    • 1ª Sem: 12 MAX | 2ª Sem: 10 MAX | 3ª Sem: 8 MAX | 4ª Sem: 8-6 MAX
+                                </div>
+                            </td>
+                            <td>3 x MAX</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">6. Rosca Scott Máquina</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga 10x8 e as 2 últimas com 5x12.<br>
+                                    • 1ª Sem: 12 a 15 | 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bloco-treino-item" data-treino="t3">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 3</h3>
+                    <p>QUADRÍCEPS</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">1. Agachamento Livre (Suporte)</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga (10kg - 20kg - 30kg - 30kg).<br>
+                                    • 1ª Sem: 15-12-12-10 | 2ª Sem: 12-10-10-8 | 3ª Sem: 12-10-8-6 | 4ª Sem: 10-8-6-4
+                                </div>
+                            </td>
+                            <td>4 x Pirâmide</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">2. Leg Press 45º</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Cluster-Set:</strong> Carga 80kg-80kg. 4 blocos de 5 repetições com 10s de intervalo.
+                                </div>
+                            </td>
+                            <td>2 x (4 x 5)</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">3. Agachamento Hack</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga (10-20-20-30).<br>
+                                    • 1ª Sem: 12 a 15 | 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">4. Cadeira Extensora</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga 25kg. Última série faz 10, dropa para 20kg até a falha.
+                                </div>
+                            </td>
+                            <td>3 x 10 <span class="tag-tecnica">+ DROP</span></td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">5. Adução de Quadril Máquina</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga ativa (0kg). Foco na contração.
+                                </div>
+                            </td>
+                            <td>3 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">6. Panturrilha Sentado</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga inicial 0kg.<br>
+                                    • 1ª Sem: 12 a 15 | 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bloco-treino-item" data-treino="t4">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 4</h3>
+                    <p>OMBROS, TRAPÉZIO E ABDÔMEN</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">1. Manguito Rotador Externo</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Sem descanso entre os lados. Fazer preferencialmente com elástico.
+                                </div>
+                            </td>
+                            <td>2 x 20</td>
+                            <td>Sem descanso</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">2. Elevação Frontal Alternada</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> • 1ª e 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 10 a 12</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">3. Desenvolvimento Halteres Sentado</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Banco ajustado em 80º.<br>
+                                    • 1ª e 2ª Sem: 15-12-10-10-8 | 3ª Sem: 12-10-8-8-6 | 4ª Sem: 10-8-6-4
+                                </div>
+                            </td>
+                            <td>5 x Variação</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">4. Elevação Lateral Unilateral Polia Baixa</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Polia no joelho, dê um passo para fora da máquina.
+                                </div>
+                            </td>
+                            <td>4 x 10 a 12</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">5. Encolhimento de Ombros com Halteres</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Pico de Contração:</strong> Peito apoiado no banco. Segurar 1-2s em cima.
+                                </div>
+                            </td>
+                            <td>3 x 10 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">6A. Abdominal Supra Pés Altos</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Combinado:</strong> Fazer alternado com a prancha isométrica.
+                                </div>
+                            </td>
+                            <td>3 x 10 a 15</td>
+                            <td>Alternado</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">6B. Abdominal Prancha Isométrica</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Sustentação até a falha total.
+                                </div>
+                            </td>
+                            <td>3 x Falha</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">7. Cardio Esteira ou Bike</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> 20 min. Bike ajuda a poupar as articulações para o dia posterior.
+                                </div>
+                            </td>
+                            <td>20 min</td>
+                            <td>Fim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bloco-treino-item" data-treino="t5">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 5</h3>
+                    <p>PERNA POSTERIOR E GLÚTEO</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries x Repetições</th>
+                            <th>Descanso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">1. Stiff Pés Próximos Barra Livre</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Subir peso a cada série.<br>
+                                    • 1ª Sem: 15-12-12-10 | 2ª Sem: 12-10-10-8 | 3ª Sem: 12-10-8-6 | 4ª Sem: 10-8-6-4
+                                </div>
+                            </td>
+                            <td>4 x Pirâmide</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">2. Mesa Flexora</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Cluster-Set:</strong> Peso 10kg. Dividir em 4 pequenos blocos de 5 reps (10s de pausa).
+                                </div>
+                            </td>
+                            <td>2 x (4 x 5)</td>
+                            <td>120 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">3. Elevação de Quadril na Máquina</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Cargas progressivas (20kg - 40kg - 40kg - 50kg).<br>
+                                    • 1ª Sem: 12 a 15 | 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">4. Abdução de Quadril Máquina</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Carga estável de 43kg.
+                                </div>
+                            </td>
+                            <td>3 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="nome-exercicio">5. Panturrilha Hack</span>
+                                <div class="instrucoes-treino">
+                                    <strong>Instruções:</strong> Controle total na fase excêntrica.<br>
+                                    • 1ª Sem: 12 a 15 | 2ª Sem: 10 a 12 | 3ª Sem: 8 a 10 | 4ª Sem: 6 a 8
+                                </div>
+                            </td>
+                            <td>4 x 12 a 15</td>
+                            <td>90 segundos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>  
+
+        <!-- TREINO AVANÇADO -->
+ <div id="treino-avancado" class="conteudo-treino" style="display: none;">
+    <div class="lista-sanfona-treino">
+        
+        <!-- Treino 1 -->
+        <div class="bloco-treino-item" data-treino="t1">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 1</h3>
+                    <p>PEITO E PANTURRILHAS (Foco em Densidade)</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr><th>Exercício</th><th>Séries x Reps</th><th>Nota</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Supino Inclinado c/ Halteres</td><td>4 x 8-12</td><td>Carga progressiva</td></tr>
+                        <tr><td>Supino Reto Máquina/Barra</td><td>4 x 10</td><td>Amplitude máxima</td></tr>
+                        <tr><td>Crucifixo Inclinado Cabos</td><td>3 x 12</td><td>Pico de contração</td></tr>
+                        <tr><td>Dips (Paralelas) c/ peso</td><td>3 x Falha</td><td>-</td></tr>
+                        <tr><td>Panturrilha em Pé</td><td>5 x 15</td><td>2s no topo</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Treino 2 -->
+        <div class="bloco-treino-item" data-treino="t2">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 2</h3>
+                    <p>COSTAS E ABDÔMEN (Foco em Largura)</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr><th>Exercício</th><th>Séries x Reps</th><th>Nota</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Puxada Alta Pronada</td><td>4 x 10-12</td><td>-</td></tr>
+                        <tr><td>Remada Curvada (Supinada)</td><td>4 x 8-10</td><td>Tronco firme</td></tr>
+                        <tr><td>Remada Unilateral (Serrote)</td><td>3 x 10</td><td>-</td></tr>
+                        <tr><td>Pullover no Cabo</td><td>3 x 15</td><td>Alongamento extremo</td></tr>
+                        <tr><td>Levantamento Terra</td><td>3 x 6-8</td><td>Old School</td></tr>
+                        <tr><td>Abdominal Supra Polia</td><td>4 x 15</td><td>-</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Treino 3 -->
+        <div class="bloco-treino-item" data-treino="t3">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 3</h3>
+                    <p>QUADRÍCEPS E POSTERIOR (Pernas de Mutante)</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr><th>Exercício</th><th>Séries x Reps</th><th>Nota</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Agachamento Livre</td><td>4 x 8-12</td><td>Abaixo de 90°</td></tr>
+                        <tr><td>Leg Press 45°</td><td>4 x 12-15</td><td>Pés baixos</td></tr>
+                        <tr><td>Hacksquat</td><td>3 x 10</td><td>Cadência controlada</td></tr>
+                        <tr><td>Cadeira Extensora</td><td>4 x 12</td><td>Drop-set na última</td></tr>
+                        <tr><td>Mesa Flexora</td><td>4 x 12</td><td>-</td></tr>
+                        <tr><td>Stiff c/ Halteres</td><td>4 x 10</td><td>Alongar posterior</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Treino 4 -->
+        <div class="bloco-treino-item" data-treino="t4">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 4</h3>
+                    <p>OMBROS E TRAPÉZIO (Cebola 3D)</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr><th>Exercício</th><th>Séries x Reps</th><th>Nota</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Desenvolvimento Halteres</td><td>4 x 8-10</td><td>-</td></tr>
+                        <tr><td>Elevação Lateral Halteres</td><td>5 x 12-15</td><td>Drop-set sem pausa</td></tr>
+                        <tr><td>Elevação Lateral Cabo</td><td>3 x 12</td><td>Tensão constante</td></tr>
+                        <tr><td>Crucifixo Inverso Peck Deck</td><td>4 x 15</td><td>-</td></tr>
+                        <tr><td>Encolhimento</td><td>4 x 12</td><td>2s no topo</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Treino 5 -->
+        <div class="bloco-treino-item" data-treino="t5">
+            <div class="card-dia-horizontal">
+                <div class="card-info">
+                    <h3>Treino 5</h3>
+                    <p>BRAÇOS COMPLETOS E ANTEBRAÇO</p>
+                </div>
+                <button class="btn-ver-treino">Ver treino</button>
+            </div>
+            <div class="tabela-dinamica-gaveta">
+                <table class="tabela-treino">
+                    <thead>
+                        <tr><th>Exercício</th><th>Séries x Reps</th><th>Nota</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Rosca Direta Barra W</td><td>4 x 10</td><td>-</td></tr>
+                        <tr><td>Tríceps Testa Barra W</td><td>4 x 10</td><td>Banco inclinado</td></tr>
+                        <tr><td>Rosca Banco Inclinado</td><td>3 x 12</td><td>Alongamento</td></tr>
+                        <tr><td>Tríceps Pulley Corda</td><td>4 x 12</td><td>Abrindo a corda</td></tr>
+                        <tr><td>Rosca Martelo</td><td>4 x 12</td><td>Foco braquiorradial</td></tr>
+                        <tr><td>Rosca Inversa/Punho</td><td>4 x 15</td><td>Explosão antebraço</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
 
         <div class="painel-checkin">
             <h3 id="contador-semanas" class="titulo-checkin">1ª Semana de Musculação</h3>

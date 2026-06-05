@@ -1,46 +1,69 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS (Tags Globais do HTML)
+   ========================================================================== */
 
+/* Tag 'body': Controla todo o corpo visível da página. 
+   Usada aqui para zerar as margens padrão do navegador e definir a cor de fundo do site. */
 body {
     margin: 0;
     padding: 0;
-    background-color: #111111; /* Fundo escuro para o resto do site */
+    background-color: #111111; /* Fundo escuro oficial para o resto do site */
 }
 
+/* Tag 'html': Controla a raiz da página estrutural.
+   Usada para ativar a rolagem suave quando o usuário clica em links âncora. */
 html {
     scroll-behavior: smooth;
 }
 
+
+
+/* ==========================================================================
+   2. SEÇÕES DE INFORMAÇÕES DE TREINO (IDs Únicos de Seções)
+   ========================================================================== */
+
+/* O símbolo '#' (ID) serve para estilizar um elemento único e exclusivo da página. */
+
+/* ID '#info-musculacao': Aplica o degradê preto e a imagem de fundo na seção de Musculação. */
 #info-musculacao {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)), url("./imagens/fundo-musculacao.jpg");
     background-size: cover;
     background-position: center;
 }
 
+/* ID '#info-crossfit': Aplica o degradê preto e a imagem de fundo na seção de CrossFit. */
 #info-crossfit {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/cros2.jpg");
     background-size: cover;
     background-position: center;
 }
 
+/* ID '#info-funcional': Aplica o degradê preto e a imagem de fundo na seção de Treino Funcional. */
 #info-funcional {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/Treinamento-funcional.jpg");
     background-size: cover;
     background-position: center;
 }
 
+/* ID '#info-cardio': Aplica o degradê preto e a imagem de fundo na seção de Cardio. */
 #info-cardio {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/cardio2.jpg");
     background-size: cover;
     background-position: center;
 }
 
+
+
 /* ==========================================================================
-   2. O CONTAINER DA IMAGEM DE FUNDO (Rola junto com o site)
+   3. SEÇÃO PRINCIPAL DE BOAS-VINDAS / TOPO (Hero Section)
    ========================================================================== */
+
+/* ID '#geral': Container mestre da primeira dobra do site. 
+   Ocupa 100% da altura da tela (100vh) com a imagem principal do topo. */
 #geral {
     margin: 0;
     padding: 0;
     width: 100%;
-    /* 🎯 A CORREÇÃO: Troque min-height por height fixo */
     height: 100vh; 
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/fundotopo.jpg"); 
     background-position: center top;
@@ -49,18 +72,23 @@ html {
     background-attachment: scroll; 
 }
 
+/* ID '#topo': Alinha e distribui os textos internos do cabeçalho da página. */
 #topo {
     text-align: center;
     padding: 40px 20px;
 }
 
+/* O símbolo '.' (Classe) estiliza elementos que podem se repetir ou que agrupam componentes. */
+
+/* Classe '.boas-vindas': Posiciona o bloco de textos e barras no centro vertical do topo. */
 .boas-vindas {
-    margin-top: 15vh; /* Empurra os textos e a barra verde para o centro do vão preto */
+    margin-top: 15vh; 
     text-align: center;
     color: #ffffff;
     padding: 0 20px;
 }
 
+/* Elemento encadeado (Classe + Tag H2): Alvo exclusivo no título principal de boas-vindas. */
 .boas-vindas h2 {
     font-size: 3em;
     font-weight: 900;
@@ -69,6 +97,7 @@ html {
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
 }
 
+/* Elemento encadeado (Classe + Tag P): Modifica a descrição do texto introdutório. */
 .boas-vindas p {
     font-size: 1.3em;
     color: #e0e0e0;
@@ -76,103 +105,118 @@ html {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
+/* Classe '.titulo': Controla o título em destaque verde neon com animação dinâmica. */
 .titulo {
     color: rgb(31, 255, 15); 
     text-shadow: 3px 3px 6px #000;
-    margin: 20px 0 0 0; /* Ajustado o espaçamento superior */
+    margin: 20px 0 0 0; 
     font-size: 2.8em;
     font-weight: bold;
-    animation: wave 1.5s infinite; /* Animação de leve movimento para dar vida ao título */
+    animation: wave 1.5s infinite; /* Chama a animação 'wave' em loop infinito */
 }
 
+/* '@keyframes': Regra usada para criar os passos das animações do CSS (efeito de flutuar). */
 @keyframes wave {
     0% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
 }
 
+
+
 /* ==========================================================================
-   3. MENU SUPERIOR HORIZONTAL (Lista Fit)
+   4. MENU SUPERIOR HORIZONTAL (Lista Fit)
    ========================================================================== */
+
+/* Tag pura 'ul': Remove as bolinhas padrão e recuos de qualquer lista não ordenada do site. */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+/* Classe '.lista-fit': Transforma a barra verde superior em uma barra de vidro (Glassmorphism). */
 .lista-fit {
-    display: flex;             /* 🪄 Mudamos para Flexbox para dar super controle */
-    justify-content: center;    /* Centraliza os botões no meio da tela */
-    gap: 15px;                  /* 🎯 O espaço exato que você queria entre cada modalidade */
+    display: flex;             
+    justify-content: center;    
+    gap: 15px;                  /* Espaçamento perfeito e controlado entre os botões */
     max-width: 950px; 
     margin: 40px auto 0 auto; 
     padding: 10px;
-    border-radius: 50px;        /* Deixa a barra principal totalmente arredondada */
-    
-    /* 🌌 Efeito Sutil: Fundo escuro transparente com uma borda verde bem fininha */
+    border-radius: 50px;        
     background-color: rgba(0, 0, 0, 0.6); 
     border: 1px solid rgba(31, 255, 15); 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px); /* Dá um leve efeito de vidro fosco no fundo */
+    backdrop-filter: blur(4px); /* Borra tudo o que passa por trás da barra */
 }
 
+/* Elemento encadeado (.lista-fit + li): Divide o espaço da barra em proporções iguais. */
 .lista-fit li {
-    flex: 1; /* Faz todos os botões terem exatamente o mesmo tamanho proporcional */
+    flex: 1; 
 }
 
+/* Elemento encadeado (.lista-fit + li + a): Estiliza as propriedades dos links da barra verde. */
 .lista-fit li a {
     display: block;
     text-align: center;
     padding: 14px 10px;
-    color: #ffffff;             /* Texto branco por padrão para ficar sutil e chique */
+    color: #ffffff;             
     font-weight: bold;
     text-decoration: none;
     font-size: 1.05em;
-    border-radius: 40px;        /* Deixa cada caixinha de treino arredondada */
-    transition: all 0.3s ease;  /* Transição suave para os efeitos */
+    border-radius: 40px;        
+    transition: all 0.3s ease;  
 }
 
-/* Efeito sutil ao passar o mouse nos botões da barra */
+/* Pseudo-classe ':hover': Define o que acontece visualmente quando o usuário passa o mouse. */
 .lista-fit li a:hover {
-    background-color: rgb(31, 255, 15); /* Ganha o seu verde característico */
-    color: #000000;                     /* ALTERADO PARA PRETO: Garante leitura nítida sobre o fundo verde */
-    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4); /* Brilho neon sutil embaixo do botão */
-    transform: translateY(-2px);        /* O botão sobe de leve, dando sensação de clique */
+    background-color: rgb(31, 255, 15); 
+    color: #ffffff;                     /* Texto muda para preto para contraste legível */
+    box-shadow: 0 4px 15px rgba(31, 255, 15, 0.4); 
+    transform: translateY(-2px);        /* Faz o botão subir suavemente */
 }
+
+
 
 /* ==========================================================================
-   4. O BOTÃO DOS 3 TRACINHOS (Sempre visível no topo esquerdo)
+   5. BOTÃO DO MENU FLUTUANTE (Três Tracinhos Fixo)
    ========================================================================== */
+
+/* ID '#controle-menu': Oculta a caixa de marcação (checkbox) nativa do HTML. */
 #controle-menu {
-    display: none; /* Esconde o quadradinho do checkbox */
+    display: none; 
 }
 
+/* Classe '.botao-menu': Transforma o label do checkbox em um botão circular flutuante verde. */
 .botao-menu {
     display: block;
     font-size: 30px;
-    color: rgb(31, 255, 15); /* Cor verde idêntica ao seu tema */
-    background-color: rgba(0, 0, 0, 0.75); /* Fundo preto circular atrás dele */
+    color: rgb(31, 255, 15); 
+    background-color: rgba(0, 0, 0, 0.75); 
     width: 55px;
     height: 55px;
-    line-height: 50px; /* Centraliza o ícone ☰ perfeitamente */
+    line-height: 50px; 
     text-align: center;
     cursor: pointer;
-    border-radius: 50%; /* Deixa o botão redondo e moderno */
+    border-radius: 50%; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     
-    /* 📌 Fixado na tela para o usuário abrir quando quiser */
+    /* Fixa o botão no canto superior esquerdo na frente de qualquer elemento da tela */
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 100; /* Fica na frente de tudo */
+    z-index: 100; 
     
     transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
+
+
 /* ==========================================================================
-   5. A GAVETA LATERAL (Menu Oculto)
+   6. GAVETA LATERAL OCULTA (Menu Sidebar)
    ========================================================================== */
-   
+
+/* ID '#lado': Define a estrutura da barra lateral preta oculta que desliza da esquerda. */
 #lado {
     width: 280px;
     height: 100vh;
@@ -180,21 +224,23 @@ ul {
     top: 0;
     left: 0;
     z-index: 99;
-    padding-top: 90px; /* Começa abaixo do botão redondo */
+    padding-top: 90px; 
     box-sizing: border-box;
     
-    /* 👻 Começa totalmente escondido na esquerda */
+    /* Inicia escondido fora da tela visível esquerda (-100%) */
     transform: translateX(-100%);
-    background: rgba(15, 15, 15, 0.95); /* Fundo escuro sólido ao abrir */
+    background: rgba(15, 15, 15, 0.95); 
     border-right: 4px solid rgb(31, 255, 15);
     
     transition: transform 0.3s ease-in-out;
 }
 
+/* Elemento encadeado (#lado + li): Cria uma linha divisória discreta sob cada item do menu. */
 #lado li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Elemento encadeado (#lado + li + a): Customiza o formato dos links internos da gaveta lateral. */
 #lado li a {
     display: block;
     padding: 15px 20px;
@@ -204,25 +250,21 @@ ul {
     text-align: left;
 }
 
-/* ==========================================================================
-   6. ANIMAÇÕES DE CLIQUE (Abertura do Menu)
-   ========================================================================== */
+/* Seletor Combinador de Irmãos ('~'): Ativa propriedades quando o checkbox está ':checked'. */
 
-/* Quando ativa o checkbox, a gaveta entra deslizando */
+/* Faz a gaveta lateral surgir deslizando para a posição zero na tela. */
 #controle-menu:checked ~ #lado {
     transform: translateX(0);
 }
 
-/* Quando ativa o checkbox, o botão gira 90 graus */
+/* Faz o botão redondo de 3 tracinhos girar 90 graus e inverter a cor para preenchido verde. */
 #controle-menu:checked ~ .botao-menu {
     transform: rotate(90deg);
-    background-color: rgba(31, 255, 15); /* Fica verde ao abrir */
+    background-color: rgba(31, 255, 15); 
     color: #FFFFFF;
 }
 
-/* ==========================================================================
-   7. HOVERS (Efeitos Visuais de Passar o Mouse)
-   ========================================================================== */
+/* Destaca o link interno da gaveta lateral em verde ao passar o mouse. */
 #lado li a:hover {
     background-color: rgb(31, 255, 15);
     color: #000000;
@@ -230,13 +272,19 @@ ul {
     transition: 0.2s;
 }
 
-/* Hovers da barra verde superior */
-/* 🏋️‍♂️ INTERAÇÃO DA MUSCULAÇÃO */
+
+
+/* ==========================================================================
+   7. INTERAÇÕES E HOVERS AVANÇADOS DA BARRA SUPERIOR (Efeitos de Fundo)
+   ========================================================================== */
+
+/* Cada classe abaixo renderiza uma imagem dinâmica no fundo do botão ao passar o mouse. */
+
 .item-musculacao a:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/academiacss.jpg");
-    background-size: cover;                 
+    background-size: cover;                                 
     background-position: center;             
-    color: #FFF;                             
+    color: #FFF;                                             
     text-shadow: 1px 1px 3px #000;           
     transition: 0.3s;
 }
@@ -250,7 +298,6 @@ ul {
     transition: 0.3s;
 }
 
-/* 🤸‍♂️ INTERAÇÃO DO CROSSFIT */
 .item-crossfit a:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/crossfitcss.jpg");
     background-size: cover;
@@ -260,7 +307,6 @@ ul {
     transition: 0.3s;
 }
 
-/* 🏃‍♂️ INTERAÇÃO DO CARDIO */
 .item-cardio a:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/cardio.jpg");
     background-size: cover;
@@ -270,9 +316,13 @@ ul {
     transition: 0.3s;
 }
 
+
+
 /* ==========================================================================
-   8. PRÓXIMOS CONTEÚDOS E DUAS COLUNAS PADRONIZADAS
+   8. BLOCOS INFORMATIVOS DE CONTEÚDO E REGRAS DE LAYOUT (Duas Colunas Flex)
    ========================================================================== */
+
+/* Classe '.bloco-informativo': Estrutura geral dos containers de texto e vídeo do site. */
 .bloco-informativo {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -287,23 +337,25 @@ ul {
     align-items: center; 
 }
 
-.coluna-esquerda {
+/* Classes '.coluna-esquerda' e '.coluna-direita': Organizam o layout lado a lado proporcionalmente. */
+.coluna-esquerda, 
+.coluna-direita {
     flex: 1;          
-    min-width: 300px; 
+    min-width: 320px;
+    box-sizing: border-box;
 }
 
 .coluna-direita {
-    flex: 1;          
-    min-width: 300px;
     display: flex;
     justify-content: center;
 }
 
+/* Classe '.video-container' e tags internas: Limitam e arredondam os frames de vídeos embutidos. */
 .video-container {
     width: 100%;
     max-width: 500px; 
+    margin: 0 auto;
 }
-
 .video-container iframe {
     width: 100%;
     height: 315px;
@@ -311,6 +363,7 @@ ul {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Elementos textuais internos dos blocos informativos: */
 .bloco-informativo h2 {
     font-size: 2.2em;
     color: rgb(31, 255, 15);
@@ -342,12 +395,12 @@ ul {
     margin-bottom: 15px;
 }
 
+/* Lista de benefícios: Troca o marcador por um símbolo customizado de check '✓' verde. */
 .lista-beneficios {
     list-style: none;
     padding: 0;
     margin: 0 0 25px 0;
 }
-
 .lista-beneficios li {
     font-size: 1em;
     line-height: 1.6;
@@ -357,6 +410,7 @@ ul {
     position: relative;
 }
 
+/* Pseudo-elemento '::before': Injeta o caractere do check dinamicamente na esquerda da linha. */
 .lista-beneficios li::before {
     content: "✓"; 
     color: rgb(31, 255, 15);
@@ -367,25 +421,14 @@ ul {
     top: 0;
 }
 
-@keyframes revelarBloco {
-    from {
-        opacity: 0;
-        transform: translateY(80px) scale(0.95); 
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1); 
-    }
-}
-
-#info-musculacao, 
-#info-crossfit,
-#info-funcional,
-#info-cardio { 
+/* Configurações de alinhamento combinadas Flexbox para todas as fichas de informação. */
+#info-musculacao, #info-crossfit, #info-funcional, #info-cardio { 
     display: flex;
     flex-wrap: wrap; 
     gap: 40px;       
     align-items: center; 
+     backdrop-filter: blur(4px); /* Borra tudo o que passa por trás da barra */
+    
 }
 
 #info-musculacao .coluna-esquerda,
@@ -407,22 +450,11 @@ ul {
     justify-content: center;
 }
 
-.coluna-esquerda, 
-.coluna-direita {
-    flex: 1;
-    min-width: 320px; 
-    box-sizing: border-box;
-}
-
 .conteudo-texto {
     width: 100%;
 }
 
-.coluna-esquerda .video-container,
-.coluna-direita .video-container {
-    margin: 0 auto;
-}
-
+/* Classe '.btn-voltar-topo': Botão arredondado minimalista para subir a página. */
 .btn-voltar-topo {
     display: block;              
     width: fit-content;          
@@ -435,10 +467,9 @@ ul {
     border: 2px solid rgb(31, 255, 15);
     border-radius: 30px;
     background-color: transparent;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
     cursor: pointer;
 }
-
 .btn-voltar-topo:hover {
     background-color: rgb(31, 255, 15);
     color: #000000;
@@ -446,32 +477,35 @@ ul {
     transform: translateY(-2px);
 }
 
+/* Animações de Scroll: Faz os blocos surgirem elegantemente ao rolar a página para baixo. */
 #info-musculacao .coluna-esquerda,
 #info-crossfit .coluna-direita .conteudo-texto,
 #info-funcional .coluna-esquerda .conteudo-texto,
 #info-cardio .coluna-direita .conteudo-texto {
     animation: surgirDoFundo linear both;
     animation-timeline: view();
-    animation-range: entry 5% cover 40%; 
+    animation-range: entry 0% cover 40%; 
 }
 
 @keyframes surgirDoFundo {
     from {
         opacity: 0;
-        transform: translateY(50px); 
+        transform: translateY(200px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0);    
+        transform: translateY(100);    
     }
 }
 
+/* Elementos internos dos cards internos de chamada de treino. */
 .chamada-treino {
     background-color: rgba(255, 255, 255, 0.05); 
     border-left: 4px solid rgb(31, 255, 15);     
     padding: 20px;
     margin: 30px 0;
     border-radius: 0 12px 12px 0;
+     backdrop-filter: blur(4px); /* Borra tudo o que passa por trás da barra */
 }
 
 .pergunta-identificacao {
@@ -494,6 +528,7 @@ ul {
     margin-bottom: 15px;
 }
 
+/* Classe '.btn-ver-treino': Botão verde de ação interno de cada bloco. */
 .btn-ver-treino {
     display: inline-block;
     background-color: rgb(31, 255, 15);
@@ -505,7 +540,6 @@ ul {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(31, 255, 15, 0.2);
 }
-
 .btn-ver-treino:hover {
     background-color: #ffffff;
     color: #000000;
@@ -513,27 +547,30 @@ ul {
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
+
+
 /* ==========================================================================
-   🎯 9. CENTRAL DE FICHAS DE TREINO (ESTILO PREMIUM GLASSMORPHISM)
+   9. CENTRAL DE FICHAS DE TREINO (Estilo Premium Glassmorphism)
    ========================================================================== */
+
+/* Classe '.central-treinos': Caixa externa com desfoque de fundo avançado. */
 .central-treinos {
     margin: 30px auto 0 auto;
     max-width: 580px;
     padding: 22px;
-    
-    /* 🌌 Mágica do Vidro Fosco: Fundo escuro sutilmente transparente + desfoque de fundo */
     background-color: rgba(0, 0, 0, 0.45); 
+    
+    /* Efeito de Borrão (Glassmorphism) na caixa principal */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     
-    /* ✨ Borda idêntica à barra verde: Arredondada (25px) e com a sua cor rgb neon */
     border: 1px solid rgb(31, 255, 15); 
     border-radius: 25px; 
-    
     text-align: center;
     box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6);
 }
 
+/* Elemento encadeado (.central-treinos + label): Texto superior em caixa alta. */
 .central-treinos label {
     display: block;
     color: #ffffff;
@@ -541,60 +578,71 @@ ul {
     font-size: 0.95em;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    text-transform: uppercase; /* Deixa o título em caixa alta para dar impacto */
+    text-transform: uppercase; 
 }
 
+/* Classe '.campo-selecao-grupo': Envelopa e alinha o Select e o Botão em linha. */
 .campo-selecao-grupo {
     display: flex;
     gap: 12px;
     justify-content: center;
-    
 }
 
-/* Caixa de Escolha (Select) Customizada */
-.central-treinos select {
+/* ID '#selecao-treino': Customização completa do campo select principal.
+   Aqui aplicamos o visual dark moderno com a seta customizada em verde neon. */
+#selecao-treino {
     flex: 1;
-    padding: 12px 40px 12px 18px; /* Espaço extra na direita para a nova seta */
-    background-color: rgba(17, 17, 17, 0.85);
+    width: 100%;
+    max-width: 400px; 
+    padding: 12px 40px 12px 18px; 
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff; 
+    background-color: rgba(17, 17, 17, 0.85); 
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
-    color: #ffffff;
-    font-size: 0.95em;
-    font-weight: 500;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
+    
+    /* Efeito de Borrão de fundo na caixinha fechada */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
 
-    /* 🪚 Remove a seta padrão feia e quadrada do Windows/Navegadores */
+    /* Remove a setinha nativa cinza quadrada do navegador */
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    /* 🏹 Insere uma nova seta minimalista em formato de linha fina (SVG) */
+    /* Injeta a seta minimalista em vetor SVG na cor verde neon oficial (#1fff0f) */
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231fff0f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-size: 16px;
 }
 
-/* 🟢 Efeito ao passar o mouse ou focar no Select principal */
-.central-treinos select:hover,
-.central-treinos select:focus {
+/* Efeito Hovers combinados: Aplica brilho verde neon quando o select é focado ou recebe mouse. */
+#selecao-treino:hover,
+#selecao-treino:focus {
     border-color: rgb(31, 255, 15);
     box-shadow: 0 0 12px rgba(31, 255, 15, 0.4);
 }
 
-/* Opções internas do Select (Dropdown list) */
-.central-treinos option {
-    background-color: #111111; /* Cor sólida para garantir leitura em qualquer sistema */
+/* Elemento encadeado (#selecao-treino + option): Estiliza as linhas da lista suspensa. */
+#selecao-treino option {
+    background-color: #111111; /* Cor sólida escura para as opções abertas */
     color: #ffffff;
     padding: 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
 }
 
-/* Botão de Abertura do Treino */
+/* Pseudo-classe ':disabled': Aplica cinza na mensagem de instrução ("Escolha uma modalidade..."). */
+#selecao-treino option:disabled {
+    color: #888888; 
+    background-color: #111111;
+}
+
+/* Classe '.btn-abrir-treino': Estiliza o botão de submissão posicionado ao lado do select. */
 .btn-abrir-treino {
     background-color: rgb(31, 255, 15);
     color: #000000;
@@ -607,7 +655,6 @@ ul {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(31, 255, 15, 0.25);
 }
-
 .btn-abrir-treino:hover {
     background-color: #ffffff;
     color: #000000;
@@ -615,11 +662,16 @@ ul {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
+
+
 /* ==========================================================================
-   📱 10. REGRAS DE RESPONSIVIDADE (MOBILE / CELULARES)
+   10. REGRAS DE RESPONSIVIDADE (Media Queries para Dispositivos Móveis)
    ========================================================================== */
+
+/* '@media': Aplica novos estilos apenas se a largura da tela for de 768px ou menos (celulares). */
 @media (max-width: 768px) {
-    /* 📲 Ajuste Cirúrgico na Barra Verde Superior para virar lista vertical no Mobile */
+    
+    /* Força a barra verde de modalidades a virar uma lista vertical organizada */
     .lista-fit { 
         display: flex !important;
         flex-direction: column !important; 
@@ -644,15 +696,16 @@ ul {
         box-sizing: border-box !important;
     }
 
-    /* 📲 Ajuste da Central de Fichas para telas de Celular */
+    /* Empilha o Select e o Botão de Abrir em cima do outro na tela do celular */
     .campo-selecao-grupo {
-        flex-direction: column; /* Empilha o select e o botão no celular */
+        flex-direction: column; 
         gap: 12px;
     }
     
-    .central-treinos select {
+    #selecao-treino {
         width: 100%;
-        background-position: right 18px center; /* Ajusta o respiro da seta */
+        max-width: 100%;
+        background-position: right 18px center; 
     }
     
     .btn-abrir-treino {
@@ -661,56 +714,7 @@ ul {
     
     .central-treinos {
         width: 90%;
-        border-radius: 20px; /* Bordas ligeiramente menores para casar com a tela menor */
+        border-radius: 20px; 
         padding: 18px;
     }
-}
-/* 1. Estilização Geral da Caixa Principal (Select) */
-#selecao-treino {
-    width: 100%;
-    max-width: 400px; /* Ajuste o tamanho máximo como preferir */
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff; /* Texto branco */
-    background-color: #111111; /* Fundo escuro combinando com seu site */
-    border: 2px solid #1fff0f; /* Borda Verde Neon idêntica ao seu menu */
-    border-radius: 8px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    
-    /* Remove a setinha padrão feia do navegador para podermos customizar */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    /* Adiciona uma setinha customizada em formato SVG na cor verde neon */
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231fff0f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 16px;
-}
-
-/* Efeito de Brilho Neon quando clicar ou passar o mouse */
-#selecao-treino:hover, 
-#selecao-treino:focus {
-    box-shadow: 0 0 15px rgba(31, 255, 15, 0.4);
-    border-color: #1fff0f;
-}
-
-/* 2. Estilização das Opções Internas (Lista Suspensa) */
-#selecao-treino option {
-    background-color: #1a1a1a; /* Cor do fundo da caixinha que abre */
-    color: #ffffff; /* Cor do texto das opções */
-    padding: 12px;
-    font-family: sans-serif; /* Evita que a fonte mude para a padrão do Windows */
-    backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px); /* Garante o funcionamento no Safari/iOS */
-}
-
-/* Estilo para a primeira opção desabilitada (Escolha uma modalidade...) */
-#selecao-treino option:disabled {
-    color: #888888; /* Texto cinza para o placeholder */
-    background-color: #111111;
 }

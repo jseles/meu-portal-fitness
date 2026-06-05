@@ -458,3 +458,25 @@ body {
     padding: 10px 24px 24px 24px; /* Devolve o espaçamento interno */
     border-top: 1px solid #222222;
 }
+.nav-niveis {
+    display: flex;
+    flex-direction: column; /* Empilha os botões verticalmente */
+    gap: 10px;              /* Espaçamento entre os botões */
+    width: 100%;            /* Faz a barra ocupar toda a largura disponível */
+}
+
+.btn-nivel {
+    width: 100%;            /* Garante que o botão preencha toda a largura */
+    padding: 15px;          /* Ajusta a altura do botão */
+    background: #1a1a1a;    /* Cor de fundo escura, baseada no seu print */
+    color: white;
+    border: 1px solid #333; /* Borda sutil */
+    border-radius: 8px;     /* Bordas arredondadas */
+    cursor: pointer;
+}
+
+/* Estilo para quando o botão estiver ativo (verde) */
+.btn-nivel.active {
+    border: 2px solid #00ff00; /* Borda verde conforme o seu print */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Efeito de brilho */
+}

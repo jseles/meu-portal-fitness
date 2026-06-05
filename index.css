@@ -26,28 +26,28 @@ html {
 
 /* ID '#info-musculacao': Aplica o degradê preto e a imagem de fundo na seção de Musculação. */
 #info-musculacao {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)), url("./imagens/fundo-musculacao.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8)), url("imagens/fundo-musculacao.jpg");
     background-size: cover;
     background-position: center;
 }
 
 /* ID '#info-crossfit': Aplica o degradê preto e a imagem de fundo na seção de CrossFit. */
 #info-crossfit {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/cros2.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("imagens/cros2.jpg");
     background-size: cover;
     background-position: center;
 }
 
 /* ID '#info-funcional': Aplica o degradê preto e a imagem de fundo na seção de Treino Funcional. */
 #info-funcional {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/Treinamento-funcional.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("imagens/Treinamento-funcional.jpg");
     background-size: cover;
     background-position: center;
 }
 
 /* ID '#info-cardio': Aplica o degradê preto e a imagem de fundo na seção de Cardio. */
 #info-cardio {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./imagens/cardio2.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("imagens/cardio2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -65,7 +65,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100vh; 
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("./imagens/fundotopo.jpg"); 
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("imagens/fundotopo.jpg"); 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
